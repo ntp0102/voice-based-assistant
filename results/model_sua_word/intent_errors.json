@@ -1,0 +1,50 @@
+[
+  {
+    "text": "cách đăng ký kết hôn",
+    "intent": "ket hon",
+    "intent_prediction": {
+      "name": "ket hon tam tru",
+      "confidence": 0.4310142695903778
+    }
+  },
+  {
+    "text": "các bước đăng ký kết hôn",
+    "intent": "ket hon",
+    "intent_prediction": {
+      "name": "ket hon tam tru",
+      "confidence": 0.6144654154777527
+    }
+  },
+  {
+    "text": "tôi muốn đăng ký kết hôn",
+    "intent": "ket hon",
+    "intent_prediction": {
+      "name": "tu y ket hon",
+      "confidence": 0.47088995575904846
+    }
+  },
+  {
+    "text": "đăng ký kết hôn ở đâu",
+    "intent": "ket hon",
+    "intent_prediction": {
+      "name": "ket hon tam tru",
+      "confidence": 0.490863174200058
+    }
+  },
+  {
+    "text": "tôi cần đăng ký kết hôn",
+    "intent": "ket hon",
+    "intent_prediction": {
+      "name": "tu y ket hon",
+      "confidence": 0.5416070818901062
+    }
+  },
+  {
+    "text": "đăng ký kết hôn",
+    "intent": "ket hon",
+    "intent_prediction": {
+      "name": "ket hon tam tru",
+      "confidence": 0.4974242150783539
+    }
+  }
+]

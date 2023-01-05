@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Document {% endblock %}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/fonts/fontawesome-free-6.1.2-web/css/all.min.css') }}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <div class="left-header">
+                <a href="./" class="icon-home">
+                    <i class="fa-solid fa-house"></i>
+                </a>
+            </div>
+            <div class="right-header">
+                <h1 class="header__text-big">WELCOME TO WEBSITE</h1>
+                <h2 class="header__text-small">Hỗ trợ, giải đáp các thắc mắc tại Ủy ban hành chính Xã/Phường</h2>
+            </div>
+        </header>
+        {% block content %} 
+        <div class="body_page">
+            <div class="search-box">
+                <input type="text" id="search-box__input" placeholder="Nhập nội dung tìm kiếm">
+                <button id="search-box__btn">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="container">
+                <h1 class="button_">Nhấn vào nút bên dưới để được chúng tôi hỗ trợ</h1>
+            </div>
+            <div class="button_mic">
+                <button id="speak" class="button button5">  
+                    <i class="fa-solid fa-microphone"></i>
+                </button>
+                <p id="textarea"></p>
+            </div>
+            <div class="content">
+                <div class="left">
+                   <h1 style="color: blue;">{{ input_text }}</h1>
+                    <h1 class="text-big">{{ bot_audio }}</h1>
+                    <br><br>
+                    {% for i in thu_tuc %}
+                        <div class="text-regular">{{ i }}</div>
+                    {% endfor %} 
+                </div>
+                
+                <div class="right">
+                    <h1 class="text-regular">Tài liệu liên quan</h1>
+                   {% for i in link_extend %}
+                        <a href="{{ i[1] }}" target="_blank" class="text-small">{{ i[0] }}</a>
+                    {% endfor %} 
+                </div> 
+        
+                <div class="clear"></div>
+            </div> 
+        </div>  
+        {% endblock %}
+    </div>
+</body>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+<!-- <script src="{{ url_for('static', filename='/js/app.js') }}"></script> -->
+<script type="text/javascript">
+
+    var transcript =""
+    var speak = document.getElementById('speak');
+    var textarea = document.getElementById('textarea');
+
+    var SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    var recognition = new SpeechRecognition();
+    recognition.lang = 'vi-VI';
+
+    var getOpacity = function(el) {
+        return el.style.opacity;
+    };
+
+    speak.addEventListener('click', function() {
+        recognition.start();
+        textarea.innerHTML = "Đang lắng nghe... ";
+        console.log("Đang lắng nghe")
+        speak.style.background = "red";
+        speak.disable = true;
+        // speak.style.opacity = 0.8
+        // var currentOpacity = parseFloat(getOpacity(speak));
+        // var newOpacity = (currentOpacity < 0.9) ? 0.5 : 1;
+        // speak.style.opacity = newOpacity;
+    });
+    
+    recognition.onresult = function(e){
+        console.log(e);
+        var transcript = e.results[0][0].transcript;
+        console.log(transcript)
+        const s1 = JSON.stringify(transcript);
+        console.log(s1)
+        console.log(typeof(s1))
+        $.ajax({
+            url:"/text",
+            type:"POST",
+            contentType:"application/json; charset=utf-8",
+            data: JSON.stringify(s1)
+        });
+        speak.style.background = "green";
+        const myTimeout = setTimeout(yourFunction, 1000);
+
+        // setTimeout(yourFunction(), 1000);
+        // setInterval(yourFunction(), 10000);
+    };
+
+    recognition.onspeechend = function() {
+        recognition.stop();
+        speak.style.background = "rgb(130, 123, 123)";
+        textarea.innerHTML = "";
+        console.log("No speech")
+        // setTimeout(location.assign(window.location.href), 2000);
+
+    };
+
+    recognition.onnomatch = function(event) {
+        // textarea.innerHTML = "I didn't recognise that color.";
+        // speak.style.background = "yellow";
+    }
+
+    recognition.onerror = function(e){
+        console.log(e);
+        var transcript = "";
+        var transcript_return = "";
+        textarea.innerHTML = transcript;
+        const s2 = JSON.stringify(transcript_return);
+        console.log("Error");
+        speak.style.background = "rgb(130, 123, 123)";
+        $.ajax({
+            url:"/text",
+            type:"POST",
+            contentType:"application/json; charset=utf-8",
+            data: JSON.stringify(s2)
+        });
+    };
+
+
+    function yourFunction(){
+        console.log("yourfunction");
+        location.assign(window.location.href);
+    };
+
+    var searchBtn = document.getElementById("search-box__btn");
+    
+    searchBtn.addEventListener('click', function() {
+        var valueSearchInput = document.getElementById("search-box__input").value;
+        console.log(valueSearchInput);
+        const valueSearchInputReturn = JSON.stringify(valueSearchInput);
+        $.ajax({
+            url:"/search_tag",
+            type:"POST",
+            contentType:"application/json; charset=utf-8",
+            data: JSON.stringify(valueSearchInputReturn)
+        });
+        const myTimeout = setTimeout(yourFunction, 1000);
+    });
+
+</script>
+</html>

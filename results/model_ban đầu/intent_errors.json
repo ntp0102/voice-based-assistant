@@ -1,0 +1,106 @@
+[
+  {
+    "text": "cách đăng ký kết hôn",
+    "intent": "ket hon",
+    "intent_prediction": {
+      "name": "ket hon tam tru",
+      "confidence": 0.487457275390625
+    }
+  },
+  {
+    "text": "các bước đăng ký kết hôn",
+    "intent": "ket hon",
+    "intent_prediction": {
+      "name": "thoi gian nghi ket hon",
+      "confidence": 0.43978068232536316
+    }
+  },
+  {
+    "text": "tôi muốn đăng ký kết hôn",
+    "intent": "ket hon",
+    "intent_prediction": {
+      "name": "thoi gian nghi ket hon",
+      "confidence": 0.499080628156662
+    }
+  },
+  {
+    "text": "đăng ký kết hôn ở đâu",
+    "intent": "ket hon",
+    "intent_prediction": {
+      "name": "thoi gian nghi ket hon",
+      "confidence": 0.560722291469574
+    }
+  },
+  {
+    "text": "tôi cần đăng ký kết hôn",
+    "intent": "ket hon",
+    "intent_prediction": {
+      "name": "thoi gian nghi ket hon",
+      "confidence": 0.5471141338348389
+    }
+  },
+  {
+    "text": "đăng ký kết hôn",
+    "intent": "ket hon",
+    "intent_prediction": {
+      "name": "thoi gian nghi ket hon",
+      "confidence": 0.454592227935791
+    }
+  },
+  {
+    "text": "cách chứng thực di chúc",
+    "intent": "chung thuc di chuc",
+    "intent_prediction": {
+      "name": "di chuc chua chung thuc",
+      "confidence": 0.677424430847168
+    }
+  },
+  {
+    "text": "nơi chứng thực di chúc",
+    "intent": "chung thuc di chuc",
+    "intent_prediction": {
+      "name": "di chuc chua chung thuc",
+      "confidence": 0.5138717293739319
+    }
+  },
+  {
+    "text": "tôi muốn chứng thực",
+    "intent": "chung thuc",
+    "intent_prediction": {
+      "name": "chung thuc di chuc",
+      "confidence": 0.36534786224365234
+    }
+  },
+  {
+    "text": "chứng thực",
+    "intent": "chung thuc",
+    "intent_prediction": {
+      "name": "di chuc chua chung thuc",
+      "confidence": 0.610626220703125
+    }
+  },
+  {
+    "text": "chứng thực sổ hộ khẩu",
+    "intent": "chung thuc",
+    "intent_prediction": {
+      "name": "di chuc chua chung thuc",
+      "confidence": 0.4347384572029114
+    }
+  },
+  {
+    "text": "chứng thực căn cước công dân",
+    "intent": "chung thuc",
+    "intent_prediction": {
+      "name": "cong chung",
+      "confidence": 0.4062705636024475
+    }
+  },
+  {
+    "text": "chứng thực giấy tờ nhà đất",
+    "intent": "chung thuc",
+    "intent_prediction": {
+      "name": "cong chung",
+      "confidence": 0.4096086323261261
+    }
+  }
+]

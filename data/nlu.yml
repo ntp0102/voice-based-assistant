@@ -1,0 +1,171 @@
+version: "2.0"
+
+nlu:
+  - intent: giam ho
+    examples: |
+      - đăng ký giám hộ
+      - đăng ký làm người giám hộ
+      - cách đăng ký giám hộ
+      - điều kiện để trở thành người giám hộ
+      - cách đăng ký làm người giám hộ
+      - hướng dẫn đăng ký làm người giám hộ
+
+  - intent: ket hon
+    examples: |
+      - cách đăng ký kết hôn
+      - các bước đăng ký kết hôn
+      - tôi muốn đăng ký kết hôn
+      - đăng ký kết hôn ở đâu
+      - tôi cần đăng ký kết hôn
+      - đăng ký kết hôn
+
+  - intent: dang ky nvqs
+    examples: |
+      - đăng ký nghĩa vụ quân sự
+      - cách đăng ký nghĩa vụ quân sự lần đầu
+      - nơi đăng ký nghĩa vụ quân sự
+      - tham gia nghĩa vụ quân sự
+      - thực hiện nghĩa vụ quân sự
+      - nghĩa vụ quân sự
+
+  - intent: ho ngheo
+    examples: |
+      - cách xin giấy chứng nhận hộ nghèo
+      - giấy chứng nhận hộ nghèo
+      - thực hiện xác nhận hộ nghèo
+      - làm đơn xin xác nhận hộ nghèo
+      - xác nhận hộ nghèo
+
+  - intent: ket hon tam tru
+    examples: |
+      - cách đăng ký kết hôn ở nơi tạm trú
+      - có được đăng ký kết hôn ở nơi tạm trú khác không
+      - đăng ký kết hôn ở nơi tạm trú
+      - đăng ký kết hôn nơi tạm trú
+
+  - intent: tu y ket hon
+    examples: |
+      - ba mẹ không đồng ý thì có được kết hôn không
+      - nếu ba mẹ phản đối thì có được kết hôn không
+      - có được kết hôn khi cha mẹ không đồng ý
+      - cha mẹ tôi không cho tôi đăng ký kết hôn thì tôi có thể đăng ký không
+      - không được ba mẹ cho phép kết hôn thì có được đăng ký kết hôn không
+      - đăng ký kết hôn mà không có sự đồng ý của gia đình
+      - đăng ký kết hôn mà không có sự đồng ý của ba mẹ
+
+  - intent: thoi gian nghi ket hon
+    examples: |
+      - kết hôn được nghỉ bao nhiêu ngày
+      - kết hôn được nghỉ trong bao lâu
+      - thời gian nghỉ khi kết hôn 
+      - số ngày nghỉ khi kết hôn
+      - được nghỉ bao nhiêu ngày khi kết hôn
+
+  - intent: hoan nvqs
+    examples: |
+      - khi nào được hoãn nghĩa vụ quân sự
+      - các trường hợp được hoãn nghĩa vụ quân sự
+      - làm thế nào để được hoãn nghĩa vụ quân sự
+      - hoãn nghĩa vụ quân sự
+      - điều kiện sức khỏe được hoãn nghĩa vụ quân sự
+
+  - intent: to cao
+    examples: |
+      - cách viết đơn tố cáo tranh chấp
+      - hướng dẫn làm đơn tố cáo
+      - các bước thực hiện để làm đơn tố cáo
+      - quy trình thực hiện đơn tố cáo
+      - quy trình tố cáo 
+      - muốn tố cáo thì phải làm thế nào
+
+  - intent: khieu nai
+    examples: |
+      - cách viết đơn khiếu nại
+      - hướng dẫn làm đơn khiếu nại
+      - các bước thực hiện để làm đơn khiếu nại
+      - quy trình thực hiện đơn khiếu nại
+      - quy trình khiếu nại
+      - muốn khiếu nại thì phải làm thế nào
+
+  - intent: dang ky xe may
+    examples: |
+      - cách đăng ký xe máy 
+      - thủ tục đăng ký xe máy
+      - các mức phí khi đăng ký xe máy
+      - các mức phí khi làm giấy tờ xe máy
+      - đăng ký xe máy
+
+  - intent: chao hoi
+    examples: |
+      - chào bot
+      - xin chào, rất vui được gặp bạn
+      - chào bạn
+      - hello
+
+  - intent: chuc nang
+    examples: |
+      - bot có những chức năng gì
+      - bot có thể hỗ trợ gì cho tôi
+      - bạn có những chức năng gì
+      - bạn có thể hỗ trợ gì cho tôi
+      - chức năng của bạn
+      - chức năng của bot
+      - bạn có thể giúp gì được cho tôi
+
+  - intent: tam biet
+    examples: |
+      - tạm biệt
+      - tạm biệt bạn
+      - bye bye
+
+  - intent: tam trang buon
+    examples: |
+      - tôi đang buồn
+      - tôi không vui
+      - tôi không được vui
+      - tâm trạng tôi không tốt
+
+  - intent: chung thuc di chuc
+    examples: |
+      - cách chứng thực di chúc
+      - nơi chứng thực di chúc
+      - nơi công chứng di chúc
+      - công chứng di chúc
+
+  - intent: make happy
+    examples: |
+      - làm gì đó cho tôi vui đi
+      - làm gì đó cho tôi cười đi
+      - bạn có thể làm gì đó thú vị không
+
+  - intent: di chuc chua chung thuc
+    examples: |
+      - di chúc không chứng thực có hợp lệ không
+      - di chúc chưa chứng thực có hợp pháp không
+      - di chúc không chứng thực có hợp pháp không
+      - di chúc chưa công chứng có hợp lệ
+      - di chúc chưa công chứng có hợp pháp
+
+  - intent: chung thuc
+    examples: |
+      - chứng thực
+      - chứng thực sổ hộ khẩu
+      - chứng thực căn cước công dân
+      - chứng thực [giấy tờ]
+      - thực hiện chứng thực
+
+  - intent: cong chung
+    examples: |
+      - công chứng
+      - công chứng sổ hộ khẩu
+      - công chứng căn cước công dân
+      - công chứng [giấy tờ] 
+      - thực hiện công chứng
+
+
+  - intent: cong chung khong co ban goc
+    examples: |
+      - công chứng mà không cần bản gốc
+      - công chứng mà không có bản gốc
+      - công chứng không có bản gốc
+      - không có bản gốc thì có thể đi công chứng không
